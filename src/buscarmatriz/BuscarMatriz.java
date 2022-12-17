@@ -1,6 +1,6 @@
 
 package buscarmatriz;
-
+import java.util.Scanner;
 /**
   @author Exxe
  */
@@ -12,6 +12,7 @@ public class BuscarMatriz {
         
         llenarMatriz(matriz1);
         llenarMatriz(matriz2);
+        buscarMatriz(matriz1,matriz2);
     }
     
 public static void llenarMatriz(int[][]matriz){
@@ -24,8 +25,21 @@ public static void llenarMatriz(int[][]matriz){
           }System.out.println("");
       }System.out.println("");
   } 
-public static void buscarMatriz(int[][]matrizUno,int[][]matrizDos){
-     boolean aux;
-    }
-    
+    public static void buscarMatriz(int[][] matrizUno, int[][] matrizDos) {
+        boolean aux;
+        int i, j, x, y;
+
+        while(aux = true){
+        for (i = 0; i < matrizUno.length; i++) {
+            for (j = 0; j < matrizUno.length; i++) {
+                if (matrizUno[i][j] == matrizDos[i][j]) {
+                    System.out.println("Se encontro el numero " + matrizUno[i][j] + " En la posición " + i + "," + j);
+                    break;
+                }else{
+                  aux = false;
+                }
+            }
+        }
+      }
+    }     
 }
